@@ -2,7 +2,7 @@
 
 > The official web portal for FIRST Tech Challenge (FTC) Team 32483, featuring team updates, robot design documentation, outreach initiatives, and resource hubs.
 
-> HERE IS THE LINK TO A SHORT VIDEO WITH THE COOL THINGS OF THE SITE!! :: ###[LinkToVideo](https://canva.link/n4lmw9finngqaoz)
+> HERE IS THE LINK TO A SHORT VIDEO WITH THE COOL THINGS OF THE SITE!! :: [LinkToVideo](https://canva.link/n4lmw9finngqaoz)
 
 ---
 
