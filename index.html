@@ -108,9 +108,9 @@
     <div class="card">
       <h3>Countdown</h3>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-        <div class="stat"><strong id="comp-days">13</strong><div>Days</div></div>
-        <div class="stat"><strong id="comp-hours">13</strong><div>Hours</div></div>
-        <div class="stat"><strong id="comp-minutes">18</strong><div>Minutes</div></div>
+        <div class="stat"><strong id="comp-days">00</strong><div>Days</div></div>
+        <div class="stat"><strong id="comp-hours">00</strong><div>Hours</div></div>
+        <div class="stat"><strong id="comp-minutes">00</strong><div>Minutes</div></div>
         <div class="stat"><strong id="comp-seconds">00</strong><div>Seconds</div></div>
       </div>
     </div>
@@ -124,7 +124,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     if (typeof startCountdown === 'function') {
-      startCountdown('2026-09-12T02:00:00', 'comp');
+      startCountdown('2026-10-10T012:00:00', 'comp');
     } else {
       console.error('startCountdown function is not loaded yet! check your script tags.');
     }
