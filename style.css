@@ -1399,6 +1399,7 @@ p a:hover {
     flex-direction: column;
     align-items: stretch;
     gap: 20px; 
+  }
 
   .mentorship-text,
   .FLLFTC-text,
@@ -1426,7 +1427,6 @@ p a:hover {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 2; 
-  }
   }
 }
 
@@ -2412,4 +2412,93 @@ footer {
   .header-right-group { min-width: 0; gap: 8px; }
   .mobile-brand { font-size: clamp(0.65rem, 2.8vw, 1rem); letter-spacing: 0.5px; }
   .header-logo { flex-shrink: 0; width: 36px; height: 36px; }
+}
+
+/* Shared responsive rules for every page, including nested articles. */
+img, video { max-width: 100%; }
+.container, .container * { min-width: 0; }
+.container { overflow-wrap: anywhere; }
+.buttons { flex-wrap: wrap; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.form-btn, .season-dropdown-btn { min-width: 0; width: 100%; gap: 12px; height: auto; min-height: 60px; }
+.toggle-icon { flex-shrink: 0; }
+.form-content iframe, .form-container iframe { width: 100%; max-width: 100%; }
+.sidebar { height: 100dvh; overflow-y: auto; overscroll-behavior-y: contain; padding-bottom: max(30px, env(safe-area-inset-bottom)); }
+.sidebar > * { flex-shrink: 0; }
+.sidebar-contact { max-width: 100%; overflow-wrap: anywhere; }
+footer { display: block; }
+footer > div { width: 100%; }
+footer > div > div { max-width: 100%; }
+
+@media (max-width: 1150px) {
+  .mentorship-section, .FLLFTC-section, .community-section,
+  .innovation-section, .lookingahead-section, .blogblob-section,
+  .fllmentoring-section, .fllmentoring-sectionpt2,
+  .arc-viewer-section, .arc-strengths-weaknesses-section, .viewer-row-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .mentorship-text, .FLLFTC-text, .community-text, .innovation,
+  .lookingahead-text, .blogblob-text, .fllmentoring-text,
+  .fllmentoring-textpt2, .arc-viewer-text, .arc-strengths-block,
+  .arc-weaknesses-block {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    flex: auto;
+  }
+  .carousel-container, .carousel-containerv2,
+  .FLLFTC-image, .community-image, .lookingahead-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .arc-viewer-container { flex: auto; width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  #arc-viewer-img { object-fit: contain; }
+  .robot-arc-title h3 { font-size: clamp(40px, 10vw, 120px); letter-spacing: 0.08em; }
+}
+
+@media (max-width: 768px) {
+  .hero, .heroes, .heroic, .mentorship-text, .FLLFTC-text,
+  .community-text, .innovation, .lookingahead-text, .blogblob-text,
+  .fllmentoring-text, .fllmentoring-textpt2 { padding: 22px; }
+  .hero h1, .mainPage-Headers, .heroes h2 { font-size: clamp(24px, 5vw, 36px); }
+  .heroes p { font-size: 16px; line-height: 1.6; }
+  .form-btn, .season-dropdown-btn { padding: 14px 18px; font-size: 18px; letter-spacing: 0.5px; }
+  .form-content, .dropdown-content { padding: 12px; }
+  .mentors-grid { gap: 28px; padding: 20px 0; }
+  .mentor-card { transform: none; width: min(100%, 280px); height: auto; min-height: 230px; }
+  .mentor-card:hover { transform: none; }
+  .mentor-card-inner { transform: none; width: 100%; }
+  .robot-arc-title-section { flex-wrap: wrap; justify-content: center; }
+  .robot-arc-title { height: auto; min-height: 120px; flex-basis: 100%; }
+  .arc-title-image-box { width: 160px; height: 160px; }
+  .article-card { width: min(300px, 100%); padding: 20px; }
+  .prev-btn { left: 0; }
+  .next-btn { right: 0; }
+  .scroll-container { scroll-snap-type: x proximity; }
+  .article-card { scroll-snap-align: start; }
+  .site-footer { padding: 24px 18px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 90px 14px 24px; }
+  .hero, .heroes, .heroic, .mentorship-text, .FLLFTC-text,
+  .community-text, .innovation, .lookingahead-text, .blogblob-text,
+  .fllmentoring-text, .fllmentoring-textpt2 { padding: 18px; }
+  .buttons { flex-direction: column; align-items: stretch; }
+  .stat { flex: 1 1 100px; min-width: 0; }
+  .poki-gallery-grid { grid-template-columns: minmax(0, 1fr); padding: 0; grid-auto-rows: 240px; }
+  .poki-gallery-grid .gallery-item { grid-column: span 1; grid-row: span 1; }
+  footer > div { flex-direction: column; }
+  footer > div > div { min-width: 0 !important; }
+}
+
+/* Captions remain readable on devices without hover. */
+@media (hover: none) {
+  .gallery-item .caption { transform: none; opacity: 1; }
+  .season-dropdown-btn:hover { transform: none; }
 }

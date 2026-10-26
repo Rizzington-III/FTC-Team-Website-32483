@@ -9,25 +9,73 @@
 </head>
 <body>
 
-  <aside class="sidebar">
-    <img class="logo" src="./Images/logo.png" alt="logo">
-    <div class="brand">The Emerald Engineers<br><small>FTC Team #32483</small></div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="mission.html">Our Mission</a>
-      <a href="team.html">Team</a>
-      <a href="robot.html">Robot & Notebook</a>
-      <a href="outreach.html">Outreach & Mentoring</a>
-      <a href="sponsors.html">Sponsors</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="youtube.html">YouTube</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="extra.html">Extra</a>
-    </nav>
-  </aside>
-    
+<div class="mobile-header">
+  <div class="header-actions">
+    <button id="menuToggle" class="hamburger-btn" type="button" aria-label="Open menu">☰</button>
+    <button class="theme-toggle hamburger-btn" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+      <svg class="theme-moon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+      <svg class="theme-sun" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+
+
+  <div class="header-right-group">
+    <div class="mobile-brand">The Emerald Engineers</div>
+    <img src="./Images/currentLogo.png" alt="The Emerald Engineers Logo" class="header-logo">
+  </div>
+</div>
+
+<aside class="sidebar">
+  <button id="sidebarClose" class="sidebar-close-btn">✕</button>
+
+  <div class="brand">
+    MENU
+    <br>
+  </div>
+  <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="team.html">Meet the Team</a>
+
+  <details class="dropdown">
+    <summary class="dropdown-title">
+      Resources
+      <span class="arrow-circle"><span class="arrow"></span></span>
+    </summary>
+    <div class="dropdown-subpages">
+      <a href="robot.html">Our Robot</a>
+      <a href="mission.html">Mission Statement</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="programs.html">Programs</a>
+      <a href="articleHub.html">Article Hub</a>
+    </div>
+  </details>
+
+  <a href="gallery.html">Team Gallery</a>
+  <a href="sponsors.html">Sponsor Us</a>
+  <a href="feedback.html">Feedback</a>
+</nav>
+
+<div class="sidebar-contact">
+    <h4>Connect With Us</h4>
+    <p class="contact-email">
+      📧 <a href="mailto:emeraldengineers10@gmail.com">emeraldengineers10@gmail.com</a>
+    </p>
+    <div class="sidebar-socials">
+      <a href="https://instagram.com/yourteam" target="_blank">
+        <img src="./Images/instagram-logo.jpg" alt="Instagram" class="sidebar-contact-icon">
+        Instagram
+      </a>
+      <a href="https://github.com/32483-The-Emerald-Engineers/The-Emerald-Engineers-32483-FTC" target="_blank">
+        <img src="./Images/github-logo.jpg" alt="GitHub" class="sidebar-contact-icon">
+        GitHub
+      </a>
+    </div>
+  </div>
+</aside>
+
+
+
 <div class="container">
 <h2>Extra Page</h2><p>Placeholder for extra content, announcements, or downloads.</p>
 <footer class="footer">&copy; 2025 The Emerald Engineers — All Rights Reserved</footer>
