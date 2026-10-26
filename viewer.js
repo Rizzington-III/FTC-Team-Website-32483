@@ -139,10 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.touches.length === 1) startDrag(e.touches[0].clientX, e.touches[0].clientY);
   });
   window.addEventListener('touchmove', (e) => {
-    if (e.touches.length === 1) {
+    if (isDragging && e.touches.length === 1) {
       e.preventDefault(); 
       dragMove(e.touches[0].clientX, e.touches[0].clientY);
     }
   }, { passive: false });
   window.addEventListener('touchend', stopDrag);
+  window.addEventListener('touchcancel', stopDrag);
 });
